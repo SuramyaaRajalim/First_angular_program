@@ -1,0 +1,32 @@
+<!--angular directive:ngIf
+<div *ngIf ="players.length>0">Players List</div>
+<div *ngIf="players.length==1">One player</div>
+
+ngFor
+<div>
+  <li *ngFor="let i of players">{{i}}</li>
+</div>
+
+one way data binding
+<div>
+  <p>{{message}}</p>
+</div>
+
+two way bniding using ngmode
+<div>
+  <input [(ngModel)]="inputValue" placeholder="type here">
+  <p> You typed:{{inputValue}}</p>
+</div>
+-->
+<p><br><br><b>TO DO:</b></p>
+<div>
+  <div *ngFor="let activity of activities">
+    <p><input type="checkbox" (change)="activity.done= !activity.done">{{activity.name}}</p>
+  </div>
+
+
+  <p><br><b>Activities completed:<br></b></p>
+  <div *ngFor="let activity of activities">
+    <p *ngIf="activity.done">{{activity.name}} Venue:{{activity.venue}}</p>
+  </div>
+</div>
